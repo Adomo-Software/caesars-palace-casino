@@ -17,9 +17,6 @@ class Casino implements Elevator {
     }
 
     public void goToFloor(int floorNumber) {
-        if (floorNumber <= 0) {
-            System.err.println("Enter a positive floor number");
-        }
         floorNumber--;
         int currentIndex = floors.indexOf(currentFloor);
         while (currentIndex < floorNumber) {
