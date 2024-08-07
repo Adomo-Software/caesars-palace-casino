@@ -1,5 +1,8 @@
 package com.adomasda;
 
+import com.adomasda.RoomTypes.*;
+import com.adomasda.FloorNth.*;
+
 public class Main {
     public static void main(String[] args) {
         FloorConfig firstFloorConfig = new FloorConfig(GameType.BLACKJACK, GameType.SLOT_MACHINE, ServiceType.SPA);
