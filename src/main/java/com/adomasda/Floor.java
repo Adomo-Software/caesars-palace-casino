@@ -14,7 +14,9 @@ public abstract class Floor {
         return floorConfig.items.add(item);
     }
 
-    public int getIndex() {return this.index;}
+    public int getIndex() {
+        return this.index;
+    }
 
     abstract void enter();
 }

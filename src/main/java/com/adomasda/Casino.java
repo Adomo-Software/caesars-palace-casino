@@ -23,11 +23,13 @@ class Casino implements Elevator {
         floorNumber--;
         int currentIndex = floors.indexOf(currentFloor);
         while (currentIndex < floorNumber) {
-            System.out.println("Passing floor: " + floors.get(currentIndex).getIndex());
+            System.out.println(
+                    "Passing floor: " + floors.get(currentIndex).getIndex());
             currentIndex++;
         }
         while (currentIndex > floorNumber) {
-            System.out.println("Passing floor: " + floors.get(currentIndex).getIndex());
+            System.out.println(
+                    "Passing floor: " + floors.get(currentIndex).getIndex());
             currentIndex--;
         }
         currentFloor = floors.get(floorNumber);

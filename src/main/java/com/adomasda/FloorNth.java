@@ -8,7 +8,8 @@ public class FloorNth {
 
         @Override
         void enter() {
-            System.out.println("Entering First Floor with items: " + floorConfig.items);
+            System.out.println(
+                    "Entering First Floor with items: " + floorConfig.items);
         }
     }
 
@@ -19,7 +20,8 @@ public class FloorNth {
 
         @Override
         void enter() {
-            System.out.println("Entering Floor with items: " + floorConfig.items);
+            System.out.println(
+                    "Entering Floor with items: " + floorConfig.items);
         }
     }
 
@@ -30,7 +32,8 @@ public class FloorNth {
 
         @Override
         void enter() {
-            System.out.println("Entering Third Floor with items: " + floorConfig.items);
+            System.out.println(
+                    "Entering Third Floor with items: " + floorConfig.items);
         }
     }
 
@@ -41,7 +44,8 @@ public class FloorNth {
 
         @Override
         void enter() {
-            System.out.println("Entering Third Fourth with items: " + floorConfig.items);
+            System.out.println(
+                    "Entering Third Fourth with items: " + floorConfig.items);
         }
     }
 }
