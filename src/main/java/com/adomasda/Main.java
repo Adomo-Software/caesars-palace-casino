@@ -1,7 +1,6 @@
 package com.adomasda;
 
-import com.adomasda.FloorNth.*;
-import com.adomasda.RoomTypes.*;
+import com.adomasda.Casino.*;
 
 public class Main {
     public static void main(String[] args) {
