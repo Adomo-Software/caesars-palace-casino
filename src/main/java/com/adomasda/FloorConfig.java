@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 class FloorConfig {
-    public LinkedList<Object> items;
+    public LinkedList<Object> floors;
 
-    public FloorConfig(Object... elements) {
-        items = new LinkedList<>(Arrays.asList(elements));
+    public FloorConfig(Object... floors) {
+        this.floors = new LinkedList<>(Arrays.asList(floors));
     }
 }

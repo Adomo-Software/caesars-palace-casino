@@ -1,22 +1,13 @@
 package com.adomasda;
 
-public abstract class Floor {
-    FloorConfig floorConfig;
+import java.util.LinkedList;
 
-    private int index;
+public abstract class Floor extends FloorWIP {
+    public static LinkedList<Integer> workingFloors = new LinkedList<>();
 
     Floor(FloorConfig floorConfig, int index) {
-        this.floorConfig = floorConfig;
-        this.index = index;
+        super(floorConfig, index);
+        workingFloors.add(this.getIndex());
     }
-
-    public boolean addItem(Object item) {
-        return floorConfig.items.add(item);
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    abstract void enter();
 }
+

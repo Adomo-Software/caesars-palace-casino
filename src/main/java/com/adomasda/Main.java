@@ -12,10 +12,13 @@ public class Main {
         Floor firstFloor = new FirstFloor(firstFloorConfig);
         Floor secondFloor = new SecondFloor(secondFloorConfig);
         Floor thirdFloor = new ThirdFloor(secondFloorConfig);
+        FloorWIP forthFloor = new FourthFloor(secondFloorConfig);
 
-        Casino casino = new Casino(firstFloor, secondFloor, thirdFloor);
+        Casino casino = new Casino(firstFloor, secondFloor, thirdFloor, forthFloor);
 
         casino.goToFloor(3);
         casino.goToFloor(1);
+        casino.goToFloor(4);
+
     }
 }
