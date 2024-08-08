@@ -17,10 +17,10 @@ class Casino implements Elevator {
         SHOP
     }
 
-    private LinkedList<FloorWIP> floors;
-    private FloorWIP currentFloor;
+    private LinkedList<Floor> floors;
+    private Floor currentFloor;
 
-    public Casino(FloorWIP... floors) {
+    public Casino(Floor... floors) {
         this.floors = new LinkedList<>(Arrays.asList(floors));
         this.currentFloor = this.floors.get(0);
     }
@@ -46,7 +46,7 @@ class Casino implements Elevator {
         currentFloor.enter();
     }
 
-    static class FirstFloor extends Floor {
+    static class FirstFloor extends FloorWorking {
         FirstFloor(FloorConfig floorConfig) {
             super(floorConfig, 1);
         }
@@ -58,7 +58,7 @@ class Casino implements Elevator {
         }
     }
 
-    static class SecondFloor extends Floor {
+    static class SecondFloor extends FloorWorking {
         SecondFloor(FloorConfig floorConfig) {
             super(floorConfig, 2);
         }
@@ -70,7 +70,7 @@ class Casino implements Elevator {
         }
     }
 
-    static class ThirdFloor extends Floor {
+    static class ThirdFloor extends FloorWorking {
         ThirdFloor(FloorConfig floorConfig) {
             super(floorConfig, 3);
         }
@@ -89,7 +89,7 @@ class Casino implements Elevator {
 
         @Override
         void enter() {
-            System.out.println("This floor is under construction, working floors are: " + Floor.workingFloors);
+            System.out.println("This floor is under construction, working floors are: " + FloorWorking.workingFloors);
         }
     }
 }

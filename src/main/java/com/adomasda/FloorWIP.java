@@ -2,23 +2,11 @@ package com.adomasda;
 
 import java.util.LinkedList;
 
-public abstract class FloorWIP {
-    FloorConfig floorConfig;
-
-    private int index;
+public abstract class FloorWIP extends Floor {
+    public static LinkedList<Integer> WIPfloors = new LinkedList<>();
 
     FloorWIP(FloorConfig floorConfig, int index) {
-        this.floorConfig = floorConfig;
-        this.index = index;
+        super(floorConfig, index);
+        WIPfloors.add(this.getIndex());
     }
-
-    public boolean addItem(Object item) {
-        return floorConfig.floors.add(item);
-    }
-
-    public int getIndex() {
-        return this.index;
-    }
-
-    abstract void enter();
 }
