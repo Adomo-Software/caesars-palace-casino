@@ -9,5 +9,9 @@ public abstract class FloorWorking extends Floor {
         super(floorConfig, index);
         workingFloors.add(this.getIndex());
     }
+
+    boolean isAccessible() {
+        return true;
+    }
 }
 

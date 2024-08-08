@@ -42,8 +42,13 @@ class Casino implements Elevator {
                     "Passing floor: " + floors.get(currentIndex).getIndex());
             currentIndex--;
         }
-        currentFloor = floors.get(floorNumber);
-        currentFloor.enter();
+        currentIndex = floorNumber;
+        while (!floors.get(currentIndex).isAccessible()) {
+            floors.get(currentIndex).enter();
+            currentIndex++;
+        }
+        floors.get(currentIndex).enter();
+        currentFloor = floors.get(currentIndex);
     }
 
     static class FirstFloor extends FloorWorking {
@@ -58,15 +63,9 @@ class Casino implements Elevator {
         }
     }
 
-    static class SecondFloor extends FloorWorking {
+    static class SecondFloor extends FloorWIP {
         SecondFloor(FloorConfig floorConfig) {
             super(floorConfig, 2);
-        }
-
-        @Override
-        void enter() {
-            System.out.println(
-                    "Entering Floor with floors: " + floorConfig.floors);
         }
     }
 
@@ -82,14 +81,15 @@ class Casino implements Elevator {
         }
     }
 
-    static class FourthFloor extends FloorWIP {
+    static class FourthFloor extends FloorWorking {
         FourthFloor(FloorConfig floorConfig) {
             super(floorConfig, 4);
         }
 
         @Override
         void enter() {
-            System.out.println("This floor is under construction, working floors are: " + FloorWorking.workingFloors);
+            System.out.println(
+                    "Entering Fourth Floor with floors: " + floorConfig.floors);
         }
     }
 }

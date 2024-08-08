@@ -19,4 +19,6 @@ public abstract class Floor {
     }
 
     abstract void enter();
+
+    abstract boolean isAccessible();
 }
