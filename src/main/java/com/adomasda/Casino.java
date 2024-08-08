@@ -42,7 +42,6 @@ class Casino implements Elevator {
                     "Passing floor: " + floors.get(currentIndex).getIndex());
             currentIndex--;
         }
-        currentIndex = floorNumber;
         while (!floors.get(currentIndex).isAccessible()) {
             floors.get(currentIndex).enter();
             currentIndex++;
