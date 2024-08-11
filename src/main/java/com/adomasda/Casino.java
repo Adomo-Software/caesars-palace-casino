@@ -1,7 +1,7 @@
 package com.adomasda;
 
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 class Casino implements Elevator {
     enum GameType {
@@ -17,11 +17,11 @@ class Casino implements Elevator {
         SHOP
     }
 
-    private LinkedList<Floor> floors;
+    private ArrayList<Floor> floors;
     private Floor currentFloor;
 
     public Casino(Floor... floors) {
-        this.floors = new LinkedList<>(Arrays.asList(floors));
+        this.floors = new ArrayList<>(Arrays.asList(floors));
         this.currentFloor = this.floors.get(0);
     }
 
@@ -50,7 +50,7 @@ class Casino implements Elevator {
         currentFloor = floors.get(currentIndex);
     }
 
-    static class FirstFloor extends FloorWorking {
+    static class FirstFloor extends AvailableFloor {
         FirstFloor(FloorConfig floorConfig) {
             super(floorConfig, 1);
         }
@@ -62,13 +62,13 @@ class Casino implements Elevator {
         }
     }
 
-    static class SecondFloor extends FloorWIP {
+    static class SecondFloor extends UnavailableFloor {
         SecondFloor(FloorConfig floorConfig) {
             super(floorConfig, 2);
         }
     }
 
-    static class ThirdFloor extends FloorWorking {
+    static class ThirdFloor extends AvailableFloor {
         ThirdFloor(FloorConfig floorConfig) {
             super(floorConfig, 3);
         }
@@ -80,7 +80,7 @@ class Casino implements Elevator {
         }
     }
 
-    static class FourthFloor extends FloorWorking {
+    static class FourthFloor extends AvailableFloor {
         FourthFloor(FloorConfig floorConfig) {
             super(floorConfig, 4);
         }

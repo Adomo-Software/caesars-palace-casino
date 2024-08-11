@@ -9,10 +9,10 @@ public class Main {
         FloorConfig secondFloorConfig =
                 new FloorConfig(GameType.PACHINKO_MACHINE,
                         GameType.PACHINKO_MACHINE, ServiceType.SHOP);
-        FloorWorking firstFloor = new FirstFloor(firstFloorConfig);
-        FloorWIP secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE));
-        FloorWorking thirdFloor = new ThirdFloor(secondFloorConfig);
-        FloorWorking forthFloor = new FourthFloor(secondFloorConfig);
+        AvailableFloor firstFloor = new FirstFloor(firstFloorConfig);
+        UnavailableFloor secondFloor = new SecondFloor(new FloorConfig(GameType.PACHINKO_MACHINE));
+        AvailableFloor thirdFloor = new ThirdFloor(secondFloorConfig);
+        AvailableFloor forthFloor = new FourthFloor(secondFloorConfig);
 
         Casino casino = new Casino(firstFloor, secondFloor, thirdFloor, forthFloor);
 

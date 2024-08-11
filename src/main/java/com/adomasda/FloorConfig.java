@@ -1,12 +1,12 @@
 package com.adomasda;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 class FloorConfig {
-    public LinkedList<Object> floors;
+    public ArrayList<Object> floors;
 
     public FloorConfig(Object... floors) {
-        this.floors = new LinkedList<>(Arrays.asList(floors));
+        this.floors = new ArrayList<>(Arrays.asList(floors));
     }
 }
